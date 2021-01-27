@@ -1,0 +1,492 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  color: #31320d;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: arial;
+}
+
+a {
+  color: #e2bf8e;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2 {
+  color: #e2bf8e;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+/*h1, p {
+      margin: 30px;
+  }*/
+
+nav {
+  position: fixed;
+  padding-left: 5px;
+  padding: 5px 20px;
+  background-color: white;
+  width: 100%;
+}
+
+nav h1 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: relative;
+  top: calc(56px + 0.5rem);
+  bottom: 0;
+}
+
+form {
+  background-color: #cea264;
+  border: 1px solid #5a260c;
+  border-radius: 1%;
+  font-weight: bolder;
+  margin: 10px auto;
+  text-align: center;
+  padding: 10%;
+  text-align: left;
+}
+
+form h5 {
+  font-weight: bolder;
+  text-align: center;
+}
+
+form input {
+  width: 90%;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+textarea {
+  width: 90%;
+  height: 90px;
+  border-radius: 8px;
+}
+
+input[type="submit"] {
+  background-color: #31320d;
+  color: white;
+}
+
+#about {
+  background-color: #33320e;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#about li {
+  display: inline-block;
+  font-size: 125%;
+  list-style: none;
+  width: 30%;
+}
+
+#about p {
+  font-size: 150%;
+}
+
+#background {
+  background-image: url("../img/LutherConst2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  margin-top: -5px;
+}
+
+/*#background h1 {
+      color: white;
+      margin: 5px;
+      margin-left: 25px;
+      position: relative;
+      top: 5%;
+      text-shadow: 3px 2px 12px black;
+      font-size: 18px;
+  }*/
+
+#backgroundText {
+  margin: 0 20px;
+  position: relative;
+}
+
+#backgroundText p {
+  color: white;
+  padding-top: 40%;
+  padding-bottom: 5%;
+  text-align: center;
+  text-shadow: 3px 2px 12px black;
+}
+
+#contact {
+  background-color: #e2bf8e;
+  color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #33320e;
+}
+
+#contact1st {
+  color: #804136;
+  padding: 10%;
+}
+
+#mainContent {
+  height: 100%;
+}
+
+#loginButton {
+  float: right;
+}
+
+#profileButton,
+#logOutButton {
+  float: right;
+}
+
+#projects {
+  min-height: 320px;
+  position: relative;
+  text-align: center;
+}
+
+#projects .carousel {
+  border-top: 12px solid white;
+  border-bottom: 12px solid white;
+}
+
+#projects h1 {
+  margin-top: 0px;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+#projects .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#projectDetailsDiv {
+  background-color: #804136;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 70%;
+  margin-top: 10%;
+  margin-right: 25%;
+  padding: 5%;
+}
+
+#services-list li {
+  margin: 10px auto;
+}
+
+#social-row {
+  display: flex;
+}
+
+#social-row div {
+  font-size: 200%;
+  margin-right: 15px;
+}
+
+.add-project-btn {
+  background-color: #333333 !important;
+  border: 2px solid black !important;
+}
+.add-project-btn:hover {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+.Building {
+  background-color: orange;
+  content: "In Progress";
+  float: right;
+}
+
+.card {
+  margin: 30px auto;
+}
+
+.card-body {
+  background-color: #33320e;
+  color: white;
+}
+
+.card-title {
+  font-weight: 900;
+  margin: 0;
+  padding: 5%;
+}
+
+.carousel {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner > .item {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner > .item > img {
+  height: 100%;
+  width: 100%;
+}
+
+.Complete {
+  background-color: green;
+}
+
+.contact-type {
+  text-align: left;
+  padding: 2%;
+}
+
+.contact-type-header {
+  font-weight: bolder;
+  text-align: left;
+}
+
+.create-button {
+  color: green;
+}
+
+.Denied {
+  background-color: red;
+}
+
+.form-group {
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.home {
+  top: 0;
+}
+
+.item .active img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-contact {
+  color: #3f201a;
+  margin: 0px 2px;
+  font-size: 80%;
+}
+
+.navbar {
+  box-shadow: 2px 2px 6px grey;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+}
+
+.navbar-light .navbar-brand {
+  color: #e2bf8e;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(226, 191, 142, .8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.no-projects {
+  padding-bottom: 40px;
+}
+
+.Pending {
+  background-color: gold;
+}
+
+.profile-page {
+  padding: 30px 0px;
+}
+
+.project-delete-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.project-details {
+  box-shadow: 2px 2px 6px grey;
+  margin: 30px auto;
+  min-height: 600px;
+  width: 70%;
+}
+
+.project-details h2 {
+  margin: 10px 30px;
+  text-align: left;
+  color: #295725;
+}
+
+.project-details span {
+  font-weight: normal;
+}
+
+.project-div {
+  background-color: #804136;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.project-info {
+  background: #e2bf8e;
+  border: 2px solid silver;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1% auto;
+  padding: 1%;
+  box-shadow: 3px 2px 2px grey;
+  width: 80%;
+}
+
+.project-info a {
+  font-size: 150%;
+}
+
+.project-info a:hover {
+  color: black;
+}
+
+.project-name {
+  color: white;
+  font-size: 200%;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-title {
+  background: #381704;
+  color: #ffffff;
+  margin: 0;
+  padding: 2%;
+  border-bottom: 2px solid black;
+  text-align: left;
+}
+
+.project-status-select {
+  background-color: white;
+  margin: 0px auto;
+  width: 70%;
+}
+
+.status {
+  border-left: 2px solid #66342b;
+  color: white;
+  float: right !important;
+}
+
+@media (min-width: 600px) {
+  #background {
+    min-height: 400px;
+  }
+}
+
+/*
+  LARGE SCREENS
+  */
+@media screen and (min-width: 775px) {
+  form {
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  nav {
+    position: relative;
+    padding-left: 25px;
+    padding: 25px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  #background {
+    min-height: 600px;
+  }
+
+  #background h1 {
+    color: white;
+    position: relative;
+    top: 3%;
+    margin: 25px;
+    font-size: 26px;
+    text-shadow: 3px 2px 12px black;
+  }
+
+  #projects {
+    min-height: 660px;
+    position: relative;
+    width: 100%;
+  }
+
+  #projects .carousel {
+    border-top: 12px solid white;
+    border-bottom: 12px solid white;
+  }
+
+  #projects .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .item img {
+    height: 480px;
+  }
+
+  #contact h1,
+  p {
+    margin-left: 25px;
+  }
+
+  .login-register-form {
+    width: 50%;
+  }
+}
