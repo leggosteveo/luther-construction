@@ -1,7 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Project = require("../models/project");
-const Checkoff = require("../models/checkoff");
+const {
+  MAILGUN_USER,
+  MAILGUN_PASS,
+  NODEMAILER_TO,
+} = require("../config/config");
+
 
 mongoose.Promise = global.Promise;
 

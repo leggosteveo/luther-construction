@@ -5,10 +5,6 @@ import ProjectPage from "./ProjectPage";
 import Auth from "../components/modules/Auth";
 
 export class ProjectPageContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   async componentDidMount() {
     await this.props.dispatch(
       actions.getSingleProject(this.props.match.params.projectID)
@@ -39,7 +35,7 @@ export class ProjectPageContainer extends Component {
 
     const userRole = Auth.getUserRole();
     let admin;
-    if (userRole == "admin") {
+    if (userRole === "admin") {
       admin = true;
     } else {
       admin = false;

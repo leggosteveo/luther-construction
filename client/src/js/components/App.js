@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import { connect } from "react-redux";
 import "../../App.css";
 import Navi from "./Navi";
 import Footer from "./Footer";
 import Main from "./Main.js";
-import * as actions from "../actions/index";
 
 import Auth from "./modules/Auth";
 import ScrollToTop from "./ScrollToTop";
@@ -77,7 +75,7 @@ export class App extends Component {
               </div>
             </Switch>
           </ScrollToTop>
-          <Route path ="/" exact component={Footer} />
+          <Route path="/" exact component={Footer} />
         </BrowserRouter>
       </div>
     );

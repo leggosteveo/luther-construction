@@ -7,7 +7,11 @@ const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
   <div>
     <div className="registration-page">
       <main role="main">
-        <form className="registration-form login-register-form" method="post" onSubmit={onSubmit}>
+        <form
+          className="registration-form login-register-form"
+          method="post"
+          onSubmit={onSubmit}
+        >
           <fieldset>
             <legend>
               <h2>Registration</h2>
@@ -19,8 +23,8 @@ const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
               name="firstName"
               value={user.firstName}
               onChange={onChange}
-              required>
-              </Form.Control>
+              required
+            ></Form.Control>
             <Form.Label htmlFor="reg-author-last">Last Name:</Form.Label>
             <Form.Control
               id="reg-author-last"
@@ -28,8 +32,8 @@ const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
               name="lastName"
               value={user.lastName}
               onChange={onChange}
-              required>
-            </Form.Control>
+              required
+            ></Form.Control>
             <Form.Label htmlFor="reg-email">Email:</Form.Label>
             <Form.Control
               id="reg-email"
@@ -37,8 +41,8 @@ const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
               name="email"
               value={user.email}
               onChange={onChange}
-              required>
-            </Form.Control>
+              required
+            ></Form.Control>
             <Form.Label htmlFor="reg-pass">Password:</Form.Label>
             <Form.Control
               id="reg-pass"
@@ -46,20 +50,25 @@ const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
               name="password"
               value={user.password}
               onChange={onChange}
-              required>
-            </Form.Control>
-            <Form.Label htmlFor="reg-confirm-pass">Confirm Password:</Form.Label>
+              required
+            ></Form.Control>
+            <Form.Label htmlFor="reg-confirm-pass">
+              Confirm Password:
+            </Form.Label>
             <Form.Control
               id="reg-confirm-pass"
               type="password"
               name="confirmPassword"
               value={user.confirmPassword}
               onChange={onChange}
-              required>
-            </Form.Control>
+              required
+            ></Form.Control>
           </fieldset>
           <Button className="register-btn" type="submit" name="button">
-            Register 🔨
+            Register{" "}
+            <span role="img" aria-label="hammer" alt="hammer">
+              🔨
+            </span>
           </Button>
           {errors && (
             <p className="error-message" aria-live="assertive">

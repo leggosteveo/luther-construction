@@ -171,7 +171,7 @@ export const getProjects = () => (dispatch) => {
   const userID = Auth.getUserID();
   console.log(userRole);
   let projectsEndpoint;
-  if (userRole == "admin") {
+  if (userRole === "admin") {
     projectsEndpoint = "/api/projects";
   } else {
     projectsEndpoint = `/api/projects/${userID}`;
@@ -399,6 +399,60 @@ export const deleteProject = (projectID) => (dispatch) => {
       }
       return response.json().then((errorResponse) => {
         dispatch(deleteProjectError(errorResponse));
+      });
+    })
+    .catch(
+      (error) => console.log(error) // eslint-disable-line
+    );
+};
+
+/**
+ *
+ * NODE MESSAGING
+ *
+ **/
+
+/**
+ * SEND MESSAGE
+ **/
+export const SEND_MESSAGE_SUCCESS = "SEND_MESSAGE_SUCCESS";
+export const sendMessageSuccess = () => ({
+  type: SEND_MESSAGE_SUCCESS,
+});
+
+export const SEND_MESSAGE_ERROR = "SEND_MESSAGE_ERROR";
+export const sendMessageError = () => ({
+  type: SEND_MESSAGE_ERROR,
+});
+
+export const CLEAR_FORM = "CLEAR_FORM";
+export const clearForm = () => ({
+  type: CLEAR_FORM,
+});
+
+// POST request to API to send message.
+export const sendMessage = (message) => (dispatch) => {
+  console.log(message);
+  const mailerEnpoint = "mailer/message";
+  return fetch(mailerEnpoint, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-type": "application/json",
+      Authorization: `bearer ${Auth.getToken()}`,
+    },
+    body: JSON.stringify(message),
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        console.log("Sent message.");
+        return response.json().then((successResponse) => {
+          dispatch(sendMessageSuccess(successResponse));
+        });
+      }
+      return response.json().then((errorResponse) => {
+        console.log("Error sending message");
+        dispatch(sendMessageError(errorResponse));
       });
     })
     .catch(

@@ -16,8 +16,8 @@ export const Main = () => (
       </div>
       <div id="projects">
         <h2>PROJECTS</h2>
-        <div className="project-row">
-          <div className="card" style={{ width: "18rem" }}>
+        <div className="project-row row card-deck">
+          <div className="card">
             <h5 className="card-title text-left">Retile</h5>
             <img
               src="https://i.ibb.co/bBY37mY/IMG-2196.jpg"
@@ -25,38 +25,34 @@ export const Main = () => (
               alt="..."
             />
             <div className="card-body">
-              <p className="card-text">
+              <p className="card-footer">
                 Retiled the floor in living room area of the client.
               </p>
             </div>
           </div>
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card">
             <h5 className="card-title text-left">New Driveway</h5>
-            <img
-              src={("./img/IMG_2179.JPG")}
-              className="card-img"
-              alt="..."
-            />
+            <img src={"./img/IMG_2179.JPG"} className="card-img" alt="..." />
             <div className="card-body">
-              <p className="card-text">
+              <p className="card-footer">
                 Paved new cement driveway leading to client's house.
               </p>
             </div>
           </div>
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card">
             <h5 className="card-title text-left">New Shower</h5>
             <img src="./img/IMG_2195.JPG" className="card-img" alt="..." />
             <div className="card-body">
-              <p className="card-text">
+              <p className="card-footer">
                 Built and tiled new support wall for new shower area.
               </p>
             </div>
           </div>
-          <div className="card" style={{ width: "18rem" }}>
+          <div className="card">
             <h5 className="card-title text-left">Carpet Installation</h5>
             <img src="./img/IMG_2187.JPG" className="card-img" alt="..." />
             <div className="card-body">
-              <p className="card-text">Installed new carpet in.</p>
+              <p className="card-footer">Installed new carpet in.</p>
             </div>
           </div>
         </div>

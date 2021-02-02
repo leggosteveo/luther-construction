@@ -125,10 +125,12 @@ function validateRegistrationForm(payload) {
 
 const authRoutes = require("./routes/auth.js");
 const apiRoutes = require("./routes/api.js");
+const mailerRoutes = require("./routes/mailer.js");
 
 app.use("/api", authCheckMiddleware);
 app.use("/auth", authRoutes);
 app.use("/api", apiRoutes);
+app.use("/mailer", mailerRoutes);
 
 // all routes that are not the auth or api will be served the react app
 // app.use("/*", express.static("./client/build"));

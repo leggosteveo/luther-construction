@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import * as actions from "../actions/index";
 import Auth from "./modules/Auth";
 
 class Navi extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const history = this.props.history;
     const user = Auth.getUserName;

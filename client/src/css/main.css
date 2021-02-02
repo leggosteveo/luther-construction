@@ -75,6 +75,10 @@ form input {
   padding: 2px;
 }
 
+span {
+  font-size: 80%;
+}
+
 textarea {
   width: 90%;
   height: 90px;
@@ -226,12 +230,20 @@ input[type="submit"] {
 }
 
 .card {
-  margin: 30px auto;
+  margin: 30px 20px;
 }
 
 .card-body {
   background-color: #33320e;
   color: white;
+}
+
+.card-footer {
+  padding: 0;
+}
+
+.card-img {
+  height: 200px;
 }
 
 .card-title {
@@ -263,6 +275,10 @@ input[type="submit"] {
   background-color: green;
 }
 
+.contact-header {
+  margin-bottom: 25px;
+}
+
 .contact-type {
   text-align: left;
   padding: 2%;
@@ -284,6 +300,15 @@ input[type="submit"] {
 .form-group {
   margin: 0 auto;
   margin-bottom: 1em;
+}
+
+.footer-link {
+  color: #804136;
+}
+
+.footer-link:hover {
+  color: #9c5c51;
+  color: white;
 }
 
 .home {
@@ -344,10 +369,7 @@ input[type="submit"] {
 }
 
 .project-details {
-  box-shadow: 2px 2px 6px grey;
-  margin: 30px auto;
   min-height: 600px;
-  width: 70%;
 }
 
 .project-details h2 {
@@ -394,6 +416,7 @@ input[type="submit"] {
 .project-row {
   display: flex;
   justify-content: space-evenly;
+  margin: 0 !important;
 }
 
 .project-title {
@@ -418,8 +441,14 @@ input[type="submit"] {
 }
 
 @media (min-width: 600px) {
+  span {
+    font-size: 100%;
+  }
   #background {
     min-height: 400px;
+  }
+  .card {
+    margin: 30px auto;
   }
 }
 
@@ -481,9 +510,11 @@ input[type="submit"] {
     height: 480px;
   }
 
-  #contact h1,
-  p {
-    margin-left: 25px;
+  .project-details {
+    box-shadow: 2px 2px 6px grey;
+    margin: 30px auto;
+    min-height: 600px;
+    width: 70%;
   }
 
   .login-register-form {

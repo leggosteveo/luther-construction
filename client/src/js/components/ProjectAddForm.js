@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/index";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 
 export class projectAddForm extends Component {
   constructor(props) {
