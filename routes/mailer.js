@@ -27,7 +27,7 @@ const sendMessage = (req, res) => {
   let mailOpts;
   mailOpts = {
     from: req.body.email,
-    to: process.env.NODEMAILER_TO,
+    to: [process.env.NODEMAILER_TO, req.body.email],
     subject: "Construction Inquiry",
     text: req.body.message,
   };
