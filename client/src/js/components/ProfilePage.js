@@ -13,7 +13,7 @@ const ProfilePage = ({
   <div>
     <div className="profile-page">
       <main role="main">
-        <h1>My Projects</h1>
+        <h1 className="dark-background-header">My Projects</h1>
         <ProjectAddForm />
         {projectsErrorStatus ? (
           <div className="app-error-msg">

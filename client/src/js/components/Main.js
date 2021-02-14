@@ -1,22 +1,22 @@
 import React from "react";
-
+import Footer from "./Footer";
 export const Main = () => (
   <div className="" style={{ height: "calc(100% - 99px)" }}>
-    <div ng-view="" style={{ height: "100%" }}>
-      <div id="background" className="ng-scope">
-        <div id="backgroundText">
-          <p>
-            We are a global construction company, based in Florida, implementing
-            the most modern and proven construction techniques to bring our
-            clients visions to reality. Thank you for visiting our site, take a
-            look at our previous work and contact us if you would like more
-            information on a specific project.
-          </p>
-        </div>
+    <div id="background" className="ng-scope">
+      <div id="backgroundText">
+        <p>
+          We are a global construction company, based in Florida, implementing
+          the most modern and proven construction techniques to bring our
+          clients visions to reality. Thank you for visiting our site, take a
+          look at our previous work and contact us if you would like more
+          information on a specific project.
+        </p>
       </div>
-      <div id="projects">
-        <h2>PROJECTS</h2>
-        <div className="project-row row card-deck">
+    </div>
+    <div id="projects">
+      <h2>PROJECTS</h2>
+      <div className="project-row row card-deck">
+        <div className="col-12 col-sm-6 col-md-6 col-lg-3">
           <div className="card">
             <h5 className="card-title text-left">Retile</h5>
             <img
@@ -30,6 +30,8 @@ export const Main = () => (
               </p>
             </div>
           </div>
+        </div>
+        <div className="col-12 col-sm-6 col-md-6 col-lg-3">
           <div className="card">
             <h5 className="card-title text-left">New Driveway</h5>
             <img src={"./img/IMG_2179.JPG"} className="card-img" alt="..." />
@@ -39,6 +41,8 @@ export const Main = () => (
               </p>
             </div>
           </div>
+        </div>
+        <div className="col-12 col-sm-6 col-md-6 col-lg-3">
           <div className="card">
             <h5 className="card-title text-left">New Shower</h5>
             <img src="./img/IMG_2195.JPG" className="card-img" alt="..." />
@@ -48,35 +52,40 @@ export const Main = () => (
               </p>
             </div>
           </div>
+        </div>
+        <div className="col-12 col-sm-6 col-md-6 col-lg-3">
           <div className="card">
             <h5 className="card-title text-left">Carpet Installation</h5>
             <img src="./img/IMG_2187.JPG" className="card-img" alt="..." />
             <div className="card-body">
-              <p className="card-footer">Installed new carpet in.</p>
+              <p className="card-footer">
+                Installed new carpet in bedroom of client.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div id="about">
-        <h2>ABOUT</h2>
-        <p>
-          Luther Construction is a family owned construction company founded on
-          trust and principal. We are your one stop solution for home
-          construction and remodeling. Services include, but are not limited to:
-        </p>
-        <ul id="services-list">
-          <li>New Roof</li>
-          <li>Pool Installation</li>
-          <li>New Room</li>
-          <li>New Driveway</li>
-          <li>Appliance Installation</li>
-          <li>Deck Building</li>
-          <li>Carpet Installation</li>
-          <li>Retiling</li>
-          <li>Demolition</li>
-        </ul>
-      </div>
     </div>
+    <div id="about">
+      <h2>ABOUT</h2>
+      <p className="container">
+        Luther Construction is a family owned construction company founded on
+        trust and principal. We are your one stop solution for home construction
+        and remodeling. Services include, but are not limited to:
+      </p>
+      <ul id="services-list" className="container">
+        <li className="col-12 col-sm-6 col-md-4">New Roof</li>
+        <li className="col-12 col-sm-6 col-md-4">Pool Installation</li>
+        <li className="col-12 col-sm-6 col-md-4">New Room</li>
+        <li className="col-12 col-sm-6 col-md-4">New Driveway</li>
+        <li className="col-12 col-sm-6 col-md-4">Appliance Installation</li>
+        <li className="col-12 col-sm-6 col-md-4">Deck Building</li>
+        <li className="col-12 col-sm-6 col-md-4">Carpet Installation</li>
+        <li className="col-12 col-sm-6 col-md-4">Retiling</li>
+        <li className="col-12 col-sm-6 col-md-4">Demolition</li>
+      </ul>
+    </div>
+    <Footer />
   </div>
 );
 

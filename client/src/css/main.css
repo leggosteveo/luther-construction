@@ -4,7 +4,7 @@ html {
 
 body {
   background-color: white;
-  color: #31320d;
+  color: #381704;
   padding: 0px;
   margin: 0px;
   width: 100%;
@@ -13,20 +13,19 @@ body {
 }
 
 a {
-  color: #e2bf8e;
+  color: #381704;
 }
 
 a:hover {
   text-decoration: none;
-  color: white;
+  color: gold;
 }
 
 h1,
 h2 {
-  color: #e2bf8e;
   font-size: 26px;
   font-weight: bold;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 /*h1, p {
@@ -49,14 +48,11 @@ nav h1 {
 
 footer {
   position: relative;
-  top: calc(56px + 0.5rem);
   bottom: 0;
 }
 
 form {
-  background-color: #cea264;
-  border: 1px solid #5a260c;
-  border-radius: 1%;
+  background-color: #fbfafa;
   font-weight: bolder;
   margin: 10px auto;
   text-align: center;
@@ -93,7 +89,7 @@ input[type="submit"] {
 #about {
   background-color: #33320e;
   color: white;
-  padding: 10px 20px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -101,7 +97,6 @@ input[type="submit"] {
   display: inline-block;
   font-size: 125%;
   list-style: none;
-  width: 30%;
 }
 
 #about p {
@@ -117,16 +112,6 @@ input[type="submit"] {
   margin-top: -5px;
 }
 
-/*#background h1 {
-      color: white;
-      margin: 5px;
-      margin-left: 25px;
-      position: relative;
-      top: 5%;
-      text-shadow: 3px 2px 12px black;
-      font-size: 18px;
-  }*/
-
 #backgroundText {
   margin: 0 20px;
   position: relative;
@@ -141,20 +126,25 @@ input[type="submit"] {
 }
 
 #contact {
-  background-color: #e2bf8e;
+  background-color: #381704;
   color: white;
   position: relative;
   padding: 20px;
   text-align: center;
+  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
+    url("../img/woodgrain.jpg");
 }
 
 #contact h2 {
-  color: #33320e;
+  color: white;
 }
 
 #contact1st {
-  color: #804136;
-  padding: 10%;
+  color: white;
+}
+
+#contactForm {
+  color: #381704;
 }
 
 #mainContent {
@@ -174,6 +164,7 @@ input[type="submit"] {
   min-height: 320px;
   position: relative;
   text-align: center;
+  margin: 30px auto;
 }
 
 #projects .carousel {
@@ -194,7 +185,7 @@ input[type="submit"] {
 }
 
 #projectDetailsDiv {
-  background-color: #804136;
+  background-color: #381704;
   border-top-right-radius: 40%;
   border-bottom-right-radius: 70%;
   margin-top: 10%;
@@ -208,11 +199,16 @@ input[type="submit"] {
 
 #social-row {
   display: flex;
+  justify-content: center;
 }
 
 #social-row div {
   font-size: 200%;
   margin-right: 15px;
+}
+
+.App {
+  height: calc(100% - 50px);
 }
 
 .add-project-btn {
@@ -223,6 +219,15 @@ input[type="submit"] {
   cursor: not-allowed;
   pointer-events: all !important;
 }
+
+.add-project-form {
+  color: #381704;
+}
+
+.btn-primary {
+  background-color: #305f0c;
+}
+
 .Building {
   background-color: orange;
   content: "In Progress";
@@ -280,21 +285,28 @@ input[type="submit"] {
 }
 
 .contact-type {
-  text-align: left;
   padding: 2%;
 }
 
 .contact-type-header {
   font-weight: bolder;
-  text-align: left;
 }
 
 .create-button {
   color: green;
 }
 
+.dark-background-header {
+  color: white !important;
+}
+
 .Denied {
   background-color: red;
+}
+
+.form-control {
+  background-color: #f7f3ee;
+  color: #42230d;
 }
 
 .form-group {
@@ -303,12 +315,11 @@ input[type="submit"] {
 }
 
 .footer-link {
-  color: #804136;
+  color: white;
 }
 
 .footer-link:hover {
-  color: #9c5c51;
-  color: white;
+  color: gold;
 }
 
 .home {
@@ -318,6 +329,18 @@ input[type="submit"] {
 .item .active img {
   height: 100%;
   width: 100%;
+}
+
+.login-register-form {
+  border: none;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.login-register-page {
+  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
+    url("../img/woodgrain.jpg");
 }
 
 .nav-contact {
@@ -339,7 +362,7 @@ input[type="submit"] {
 }
 
 .navbar-light .navbar-brand {
-  color: #e2bf8e;
+  color: #381704;
 }
 
 .navbar-light .navbar-toggler {
@@ -347,7 +370,7 @@ input[type="submit"] {
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(226, 191, 142, .8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(90 54 2)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .no-projects {
@@ -360,6 +383,8 @@ input[type="submit"] {
 
 .profile-page {
   padding: 30px 0px;
+  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
+    url("../img/woodgrain.jpg");
 }
 
 .project-delete-button {
@@ -370,6 +395,12 @@ input[type="submit"] {
 
 .project-details {
   min-height: 600px;
+  height: 100%;
+  background: -webkit-linear-gradient(
+      rgba(255, 255, 254, 0.7),
+      rgb(53, 29, 3, 0.8)
+    ),
+    url("../img/woodgrain.jpg");
 }
 
 .project-details h2 {
@@ -389,7 +420,7 @@ input[type="submit"] {
 }
 
 .project-info {
-  background: #e2bf8e;
+  background: white;
   border: 2px solid silver;
   border-radius: 10px;
   display: flex;
@@ -409,7 +440,6 @@ input[type="submit"] {
 }
 
 .project-name {
-  color: white;
   font-size: 200%;
 }
 
@@ -420,7 +450,10 @@ input[type="submit"] {
 }
 
 .project-title {
-  background: #381704;
+  background-color: #381704;
+  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
+    url("../img/woodgrain.jpg");
+  font-size: 300%;
   color: #ffffff;
   margin: 0;
   padding: 2%;
@@ -434,6 +467,10 @@ input[type="submit"] {
   width: 70%;
 }
 
+.projects-page {
+  height: 100%;
+}
+
 .status {
   border-left: 2px solid #66342b;
   color: white;
@@ -444,12 +481,22 @@ input[type="submit"] {
   span {
     font-size: 100%;
   }
+
+  #about {
+    padding: 30px;
+    text-align: center;
+  }
   #background {
     min-height: 400px;
   }
   .card {
     margin: 30px auto;
   }
+}
+
+.update-project-form {
+  margin: 5%;
+  text-align: center;
 }
 
 /*
@@ -485,7 +532,6 @@ input[type="submit"] {
   }
 
   #projects {
-    min-height: 660px;
     position: relative;
     width: 100%;
   }
@@ -512,7 +558,7 @@ input[type="submit"] {
 
   .project-details {
     box-shadow: 2px 2px 6px grey;
-    margin: 30px auto;
+    margin: 0px auto;
     min-height: 600px;
     width: 70%;
   }

@@ -7,7 +7,6 @@ const {
   NODEMAILER_TO,
 } = require("../config/config");
 
-
 mongoose.Promise = global.Promise;
 
 const router = new express.Router();
@@ -107,25 +106,17 @@ router.put("/project/:projectID", updateProject);
 const deleteProject = (req, res) => {
   const projectToDelete = req.params.projectID;
   return new Promise((resolve, reject) => {
-    Checkoff.find({ projectID: projectToDelete }) // eslint-disable-line
+    Project.findById(projectToDelete)
       .remove()
-      .exec((err, results) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(results);
-        }
+      .exec()
+      .then(() => {
+        res.status(200).json({ message: `${projectToDelete} removed.` });
+      })
+      .catch((err) => {
+        console.log("Error deleting.", err);
+        res.status(500).json(err);
       });
-  })
-    .then(() => {
-      Project.findById(projectToDelete)
-        .remove()
-        .exec()
-        .then(() => {
-          res.status(200).json({ message: `${projectToDelete} removed.` });
-        });
-    })
-    .catch((err) => res.status(500).json(err));
+  });
 };
 
 router.delete("/projects/:projectID", deleteProject);

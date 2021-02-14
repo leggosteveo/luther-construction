@@ -50,10 +50,10 @@ export class changeStatusForm extends Component {
   render() {
     const shouldDisableForm = this.state.shouldDisableForm;
     return (
-      <div class="container-contact100">
-        <div class="wrap-contact100">
+      <div class="">
+        <div class="">
           <form
-            className="project-add-form contact100-form validate-form"
+            className="update-project-form validate-form"
             method="post"
             autoComplete="off"
             onSubmit={this.handleFormSubmit}

@@ -5,14 +5,13 @@ import Loader from "./Loader";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-export const LoginPage = ({
+export const DemoPage = ({
   onSubmit,
   onChange,
   user,
   registrationSuccessMessage,
   errors,
   loadingStatus,
-  testApp,
 }) => (
   <div className="login-register-page h-100">
     <div className="row h-100 justify-content-center align-items-center">
@@ -34,7 +33,6 @@ export const LoginPage = ({
             type="email"
             name="email"
             value={user.email}
-            onChange={onChange}
             placeholder="Enter email"
             required
           />
@@ -53,7 +51,6 @@ export const LoginPage = ({
             type="password"
             name="password"
             value={user.password}
-            onChange={onChange}
             placeholder="Password"
             required
           />
@@ -68,12 +65,6 @@ export const LoginPage = ({
         <Button className="login-btn" type="submit" name="button">
           Log In
         </Button>
-        <br />
-        <span>
-          <a href="#" onClick={testApp}>
-            Test the App
-          </a>
-        </span>
         {loadingStatus ? <Loader /> : <div />}
         <div className="login-form-links">
           <Link to="/register">Register</Link> {" | "}
@@ -86,7 +77,7 @@ export const LoginPage = ({
   </div>
 );
 
-LoginPage.propTypes = {
+DemoPage.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   demoSubmit: PropTypes.func.isRequired,
@@ -96,4 +87,4 @@ LoginPage.propTypes = {
   loadingStatus: PropTypes.bool.isRequired,
 };
 
-export default LoginPage;
+export default DemoPage;

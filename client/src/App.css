@@ -1,9 +1,8 @@
 .App {
   position: relative;
   text-align: center;
-  top: calc(56px + .5rem);
+  top: calc(50px + 0.5rem);
 }
-
 
 .App-logo {
   height: 40vmin;

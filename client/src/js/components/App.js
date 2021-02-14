@@ -8,6 +8,7 @@ import Main from "./Main.js";
 import Auth from "./modules/Auth";
 import ScrollToTop from "./ScrollToTop";
 //import LandingPage from './LandingPage';
+import DemoPageContainer from "./DemoPageContainer";
 import LoginPageContainer from "./LoginPageContainer";
 import RegistrationPageContainer from "./RegistrationPageContainer";
 import ProfilePageContainer from "./ProfilePageContainer";
@@ -16,7 +17,7 @@ import ProjectPageContainer from "./ProjectPageContainer";
 export class App extends Component {
   render() {
     return (
-      <div>
+      <div className="h-100">
         <BrowserRouter>
           <Navi />
           <ScrollToTop>
@@ -25,11 +26,11 @@ export class App extends Component {
                 <Route exact path="/" render={() => <Main />} />
 
                 <Route
-                  path="/login"
+                  path="/demo"
                   render={() =>
                     // eslint-disable-line
                     !Auth.isUserAuthenticated() ? (
-                      <LoginPageContainer />
+                      <DemoPageContainer />
                     ) : (
                       <Redirect to="/profile" />
                     )
@@ -42,6 +43,17 @@ export class App extends Component {
                     // eslint-disable-line
                     !Auth.isUserAuthenticated() ? (
                       <RegistrationPageContainer />
+                    ) : (
+                      <Redirect to="/profile" />
+                    )
+                  }
+                />
+                <Route
+                  path="/login"
+                  render={() =>
+                    // eslint-disable-line
+                    !Auth.isUserAuthenticated() ? (
+                      <LoginPageContainer />
                     ) : (
                       <Redirect to="/profile" />
                     )
@@ -75,7 +87,6 @@ export class App extends Component {
               </div>
             </Switch>
           </ScrollToTop>
-          <Route path="/" exact component={Footer} />
         </BrowserRouter>
       </div>
     );
