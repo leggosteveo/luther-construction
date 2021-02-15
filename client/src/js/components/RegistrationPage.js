@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 
 const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
   <div className="login-register-page h-100">
-    <div className="row h-100 justify-content-center align-items-center">
+    <div className="h-100 justify-content-center align-items-center">
       <Form
         className="login-register-form login-register-form"
         method="post"
@@ -78,7 +78,10 @@ const RegistrationPage = ({ onSubmit, onChange, user, errors }) => (
         </Button>
         <br />
         <span>
-          Already have an account? <a href="/login">Login</a>
+          Already have an account?{" "}
+          <a href="/login" class="login-register-link">
+            Login here
+          </a>
         </span>
         {errors && (
           <p className="error-message" aria-live="assertive">

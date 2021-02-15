@@ -15,7 +15,7 @@ export const LoginPage = ({
   testApp,
 }) => (
   <div className="login-register-page h-100">
-    <div className="row h-100 justify-content-center align-items-center">
+    <div className="h-100 justify-content-center align-items-center">
       <Form className="login-register-form" method="post" onSubmit={onSubmit}>
         {registrationSuccessMessage.message ? (
           <p className="success-message">
@@ -70,14 +70,20 @@ export const LoginPage = ({
         </Button>
         <br />
         <span>
-          <a href="#" onClick={testApp}>
+          <a href="#" onClick={testApp} className="login-register-link">
             Test the App
           </a>
         </span>
         {loadingStatus ? <Loader /> : <div />}
         <div className="login-form-links">
-          <Link to="/register">Register</Link> {" | "}
-          <a href="mailto:info@bigdogsteve.com?subject=Password Reset&body=Hi, I forgot my password. Please reset my password.">
+          <Link to="/register" className="login-register-link">
+            Register
+          </Link>
+          {" | "}
+          <a
+            href="mailto:info@bigdogsteve.com?subject=Password Reset&body=Hi, I forgot my password. Please reset my password."
+            className="login-register-link"
+          >
             Forgot Password?
           </a>
         </div>

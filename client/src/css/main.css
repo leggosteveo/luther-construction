@@ -338,6 +338,10 @@ input[type="submit"] {
   width: 100%;
 }
 
+.login-register-link {
+  text-decoration: underline;
+}
+
 .login-register-page {
   background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
     url("../img/woodgrain.jpg");
