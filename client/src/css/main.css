@@ -207,10 +207,6 @@ input[type="submit"] {
   margin-right: 15px;
 }
 
-.App {
-  height: calc(100% - 50px);
-}
-
 .add-project-btn {
   background-color: #333333 !important;
   border: 2px solid black !important;

@@ -64,8 +64,7 @@ export class ProjectsItem extends Component {
         >
           <h3>Delete {projectInfo.projectName}?</h3>
           <p>
-            Deleting a location will permanently remove it from your checklist
-            and you will lose your visited brewery&nbsp;record.
+            Deleting a project will permanently remove it from your projectlist.
           </p>
           <div className="delete-project">
             <button
