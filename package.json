@@ -23,6 +23,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "prop-types": "^15.7.2",
+    "react-scripts": "^5.0.1",
     "twilio": "^4.19.0",
     "validator": "^13.1.1"
   },
