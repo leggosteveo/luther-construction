@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch} from "react-router-dom";
 import "../../App.css";
 import Navi from "./Navi";
-import Footer from "./Footer";
 import Main from "./Main.js";
 
 import Auth from "./modules/Auth";
 import ScrollToTop from "./ScrollToTop";
-//import LandingPage from './LandingPage';
 import DemoPageContainer from "./DemoPageContainer";
 import LoginPageContainer from "./LoginPageContainer";
 import RegistrationPageContainer from "./RegistrationPageContainer";

@@ -40,6 +40,7 @@ export class ProjectPageContainer extends Component {
     } else {
       admin = false;
     }
+
     return (
       <ProjectPage
         project={project}

@@ -252,6 +252,12 @@ export const getSingleProject = (projectID) => (dispatch) => {
 /**
  * ADD PROJECT
  **/
+
+export const ADDING_PROJECT = "ADDING_PROJECT";
+export const addingProject = () => ({
+  type: ADDING_PROJECT,
+});
+
 export const ADD_PROJECT_SUCCESS = "ADD_PROJECT_SUCCESS";
 export const addProjectSuccess = (addProjectMsg) => ({
   type: ADD_PROJECT_SUCCESS,

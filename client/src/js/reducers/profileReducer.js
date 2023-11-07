@@ -1,6 +1,7 @@
 import * as actions from "../actions/index";
 
 export const initialState = {
+  addingProject: false,
   projectsLoadingStatus: false,
   myProjects: [],
   projectsErrorStatus: false,
@@ -67,6 +68,12 @@ export const profileReducer = (state = initialState, action) => {
     const modState = Object.assign({}, state, {
       projectsLoadingStatus: false,
       deleteProjectErrorStatus: true,
+    });
+    return modState;
+  } else if (action.type === actions.ADDING_PROJECT) {
+    const addingProject = action.addingProject;
+    const modState = Object.assign({}, state, {
+      addingProject: !state.addingProject,
     });
     return modState;
   }

@@ -2,9 +2,10 @@ import React from "react";
 import Footer from "./Footer";
 export const Main = () => (
   <div className="" style={{ height: "calc(100% - 99px)" }}>
-    <div id="background" className="ng-scope">
+    <section id="background" className="ng-scope">
       <div id="backgroundText">
         <p>
+          <h1 className="home-page-title">LUTHER CONSTRUCTION</h1>
           We are a global construction company, based in Florida, implementing
           the most modern and proven construction techniques to bring our
           clients visions to reality. Thank you for visiting our site, take a
@@ -12,9 +13,9 @@ export const Main = () => (
           information on a specific project.
         </p>
       </div>
-    </div>
-    <div id="projects">
-      <h2>PROJECTS</h2>
+    </section>
+    <section id="projects">
+      <h2 className="home-page-title">PROJECTS</h2>
       <div className="project-row row card-deck">
         <div className="col-12 col-sm-6 col-md-6 col-lg-3">
           <div className="card">
@@ -65,9 +66,9 @@ export const Main = () => (
           </div>
         </div>
       </div>
-    </div>
-    <div id="about">
-      <h2>ABOUT</h2>
+    </section>
+    <section id="about">
+      <h2 className="home-page-title">ABOUT</h2>
       <p className="container">
         Luther Construction is a family owned construction company founded on
         trust and principal. We are your one stop solution for home construction
@@ -84,7 +85,7 @@ export const Main = () => (
         <li className="col-12 col-sm-6 col-md-4">Retiling</li>
         <li className="col-12 col-sm-6 col-md-4">Demolition</li>
       </ul>
-    </div>
+    </section>
     <Footer />
   </div>
 );

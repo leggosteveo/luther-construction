@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions/index";
-import SVGDelete from "./SVGDelete";
+import DeleteIcon from "@mui/icons-material/Delete";
+import Button from "@mui/material/Button";
 
 export class ProjectsItem extends Component {
   constructor(props) {
@@ -37,53 +38,58 @@ export class ProjectsItem extends Component {
     return (
       <div>
         <div className="project-info">
-          <h2 className="project-list-title">
-            <Link to={`/projects/${projectInfo._id}`} className="project-name">
-              {projectInfo.projectID}
-            </Link>
-          </h2>
-          <div className="project-delete-button">
-            <div className="project-list-delete">
+          <div className="project-name-and-delete">
+            <h2 className="project-list-title">
+              <Link
+                to={`/projects/${projectInfo._id}`}
+                className="project-name"
+              >
+                {projectInfo.projectID}
+              </Link>
+            </h2>
+            <div
+              className="project-delete-button"
+              style={{
+                display: !this.state.deleteDialogStatus ? "block" : "none",
+              }}
+            >
               <button
                 type="submit"
                 name="x-btn"
                 onClick={this.deleteDialogChange}
               >
-                <SVGDelete />
-                <span className="visually-hidden">
-                  Delete {projectInfo.projectName}
-                </span>
+                <DeleteIcon color="error" sx={{ fontSize: 50 }} />
               </button>
             </div>
           </div>
-        </div>
+          <div
+            className="delete-project-warning"
+            hidden={!this.state.deleteDialogStatus}
+          >
+            <span className="delete-project-text">Delete?</span>
 
-        <div
-          className="delete-project-warning"
-          hidden={!this.state.deleteDialogStatus}
-        >
-          <h3>Delete {projectInfo.projectName}?</h3>
-          <p>
-            Deleting a project will permanently remove it from your projectlist.
-          </p>
-          <div className="delete-project">
-            <button
-              className="keep-project-btn"
-              type="button"
-              name="keep-btn"
-              onClick={this.deleteDialogClose}
-            >
-              No, Keep {projectInfo.projectName}
-            </button>{" "}
-            <button
-              className="delete-project-btn"
-              type="button"
-              name="remove-btn"
-              onClick={this.confirmDelete}
-            >
-              <SVGDelete />
-              &nbsp;Yes, Delete {projectInfo.projectName}
-            </button>
+            <div className="delete-project">
+              <Button
+                className="keep-project-btn btn btn-default"
+                type="button"
+                name="keep-btn"
+                onClick={this.deleteDialogClose}
+                variant="outlined"
+                color="warning"
+              >
+                No, Keep {projectInfo.projectName}
+              </Button>{" "}
+              <Button
+                className="delete-project-btn btn btn-default"
+                color="error"
+                type="button"
+                name="remove-btn"
+                onClick={this.confirmDelete}
+                variant="contained"
+              >
+                &nbsp;Yes, Delete {projectInfo.projectName}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

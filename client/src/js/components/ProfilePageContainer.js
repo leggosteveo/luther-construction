@@ -12,7 +12,9 @@ export class ProfilePageContainer extends Component {
     this.props.dispatch(actions.cleanAuth());
     this.props.dispatch(actions.getProjects());
   }
-
+  handleClick = (e) => {
+    this.props.dispatch(actions.addingProject());
+  };
   render() {
     const projectsArr = this.props.myProjects.sort(
       (a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()
@@ -31,12 +33,15 @@ export class ProfilePageContainer extends Component {
         projectsErrorStatus={this.props.projectsErrorStatus}
         addProjectErrorStatus={this.props.addProjectErrorStatus}
         deleteProjectErrorStatus={this.props.deleteProjectErrorStatus}
+        addingProject={this.props.addingProject}
+        handleClick={this.handleClick}
       />
     );
   }
 }
 
 const mapStateToProps = (state) => ({
+  addingProject: state.profile.addingProject,
   loadingStatus: state.profile.projectsLoadingStatus,
   myProjects: state.profile.myProjects,
   projectsErrorStatus: state.profile.projectsErrorStatus,

@@ -1,14 +1,10 @@
-html {
-  height: 100%;
-}
-
 body {
-  background-color: white;
+  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
+    url("../img/woodgrain.jpg");
   color: #381704;
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 100%;
   font-family: arial;
 }
 
@@ -20,17 +16,6 @@ a:hover {
   text-decoration: none;
   color: gold;
 }
-
-h1,
-h2 {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 10px 0px;
-}
-
-/*h1, p {
-      margin: 30px;
-  }*/
 
 nav {
   position: fixed;
@@ -70,11 +55,12 @@ form input {
   border-radius: 6px;
   padding: 2px;
 }
-
-span {
-  font-size: 80%;
+h1.home-page-title {
+  font-size: 1em;
 }
-
+h2.home-page-title {
+  padding: 1em 0;
+}
 textarea {
   width: 90%;
   height: 90px;
@@ -139,11 +125,16 @@ input[type="submit"] {
   color: white;
 }
 
+#contact .row {
+  align-items: center;
+}
+
 #contact1st {
   color: white;
 }
 
 #contactForm {
+  border-radius: 1em;
   color: #381704;
 }
 
@@ -217,7 +208,11 @@ input[type="submit"] {
 }
 
 .add-project-form {
+  border-radius: 0.8em;
   color: #381704;
+  padding: 2em 1em;
+  width: 96%;
+  max-width: 55rem;
 }
 
 .btn-primary {
@@ -240,6 +235,8 @@ input[type="submit"] {
 }
 
 .card-footer {
+  background-color: transparent;
+  border: none;
   padding: 0;
 }
 
@@ -322,6 +319,11 @@ input[type="submit"] {
   top: 0;
 }
 
+.home-page-title {
+  color: #fff;
+  font-weight: 900;
+}
+
 .item .active img {
   height: 100%;
   width: 100%;
@@ -341,6 +343,11 @@ input[type="submit"] {
 .login-register-page {
   background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
     url("../img/woodgrain.jpg");
+}
+
+.main-title {
+  font-size: 2em;
+  font-weight: 900;
 }
 
 .nav-contact {
@@ -383,8 +390,13 @@ input[type="submit"] {
 
 .profile-page {
   padding: 30px 0px;
-  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
-    url("../img/woodgrain.jpg");
+}
+.project {
+  background: #fff;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  padding: 0.5em;
+  text-align: left;
 }
 
 .project-delete-button {
@@ -394,23 +406,16 @@ input[type="submit"] {
 }
 
 .project-details {
-  min-height: 600px;
   height: 100%;
-  background: -webkit-linear-gradient(
-      rgba(255, 255, 254, 0.7),
-      rgb(53, 29, 3, 0.8)
-    ),
-    url("../img/woodgrain.jpg");
+  margin: 1em auto 0;
+  max-width: 35rem;
+  width: 90%;
 }
 
 .project-details h2 {
   margin: 10px 30px;
   text-align: left;
   color: #295725;
-}
-
-.project-details span {
-  font-weight: normal;
 }
 
 .project-div {
@@ -424,11 +429,15 @@ input[type="submit"] {
   border: 2px solid silver;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
+  font-family: Montserrat-Black;
+  font-size: 1em;
   justify-content: space-between;
-  margin: 1% auto;
-  padding: 1%;
-  box-shadow: 3px 2px 2px grey;
-  width: 80%;
+  margin: 1em auto 0;
+  max-width: 25rem;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 96%;
 }
 
 .project-info a {
@@ -439,8 +448,30 @@ input[type="submit"] {
   color: black;
 }
 
+.project-key {
+  font-size: 1.25em;
+  font-weight: 900;
+  margin-right: 0.25em;
+}
+
+.project-list-title {
+  font-size: 1.5em;
+}
+
 .project-name {
+  color: #333333;
   font-size: 200%;
+}
+
+.project-name-and-delete {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0.5em;
+}
+
+.projects-page {
+  padding: 1em 0;
 }
 
 .project-row {
@@ -449,26 +480,22 @@ input[type="submit"] {
   margin: 0 !important;
 }
 
-.project-title {
-  background-color: #381704;
-  background: -webkit-linear-gradient(rgb(53, 29, 3, 0.8), rgb(53, 29, 3, 0.8)),
-    url("../img/woodgrain.jpg");
-  font-size: 300%;
-  color: #ffffff;
-  margin: 0;
-  padding: 2%;
-  border-bottom: 2px solid black;
-  text-align: left;
-}
-
 .project-status-select {
   background-color: white;
   margin: 0px auto;
   width: 70%;
 }
 
-.projects-page {
-  height: 100%;
+.project-title {
+  background-color: #381704;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  font-size: 300%;
+  color: #ffffff;
+  margin: 0;
+  padding: 2%;
+  text-align: center;
 }
 
 .status {
@@ -477,9 +504,52 @@ input[type="submit"] {
   float: right !important;
 }
 
+.title-with-button {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 55rem;
+  width: 96%;
+}
+
+#back-button {
+  color: #fff;
+  font-weight: 900;
+  margin: 0 auto;
+  max-width: 45rem;
+  text-align: left;
+  width: 96%;
+}
+
+#back-button svg {
+  font-size: 2.5em;
+  transform: rotate(180deg);
+}
+
 @media (min-width: 600px) {
   span {
     font-size: 100%;
+  }
+
+  .add-project-form-content {
+    display: flex;
+  }
+
+  .add-project-form-content > div {
+    width: 50%;
+  }
+  .card {
+    margin: 30px auto;
+  }
+
+  .input-border {
+    border: 1px solid #ced4da;
+  }
+
+  .project,
+  .project-title {
+    box-shadow: 2px 2px 14px 0px #0a0a0a;
   }
 
   #about {
@@ -488,9 +558,6 @@ input[type="submit"] {
   }
   #background {
     min-height: 400px;
-  }
-  .card {
-    margin: 30px auto;
   }
 }
 
@@ -554,13 +621,6 @@ input[type="submit"] {
 
   .item img {
     height: 480px;
-  }
-
-  .project-details {
-    box-shadow: 2px 2px 6px grey;
-    margin: 0px auto;
-    min-height: 600px;
-    width: 70%;
   }
 
   .login-register-form {

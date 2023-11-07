@@ -11,7 +11,7 @@ const { PORT, DATABASE_URL } = require("./config/config");
 
 mongoose.Promise = global.Promise;
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/public")));
 
 // force use of https://
 app.use((req, res, next) => {
@@ -178,7 +178,7 @@ function closeServer() {
 }
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "client/public", "index.html"));
 });
 
 // if server.js is called directly (i.e. with `node server.js`), this block

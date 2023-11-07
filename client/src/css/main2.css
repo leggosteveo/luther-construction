@@ -35,12 +35,6 @@
   box-sizing: border-box;
 }
 
-body,
-html {
-  height: 100%;
-  //font-family: Poppins-Regular, sans-serif;
-}
-
 /*---------------------------------------------*/
 a {
   line-height: 1.7;
@@ -71,11 +65,8 @@ h6 {
 }
 
 p {
-  //font-family: Poppins-Regular;
   font-size: 14px;
   line-height: 1.7;
-  color: #666666;
-  color: white;
   margin: 0px;
 }
 
@@ -237,11 +228,11 @@ iframe {
   display: block;
   width: 100%;
   font-family: Montserrat-Black;
-  font-size: 39px;
+  font-size: 1em;
   color: #333333;
   line-height: 1.2;
   text-align: center;
-  padding-bottom: 59px;
+  padding-bottom: 1em;
 }
 
 /*------------------------------------------------------------------
@@ -250,10 +241,8 @@ iframe {
 .wrap-input100 {
   width: 100%;
   position: relative;
-  border: 1px solid #e6e6e6;
   border-radius: 13px;
   padding: 10px 30px 9px 22px;
-  margin-bottom: 20px;
 }
 
 .rs1-wrap-input100 {
@@ -377,7 +366,7 @@ textarea.input100 {
   }
 
   .wrap-input100 {
-    padding: 10px 10px 9px 10px;
+    padding: 10px 10px 2px 10px;
   }
 }
 

@@ -44,7 +44,7 @@ export class Footer extends Component {
     return (
       <footer>
         <div id="contact" className="ng-scope">
-          <h2>CONTACT</h2>
+          <h2 className="home-page-title">CONTACT</h2>
           <div className="row">
             <div id="contact1st" className="col-12 col-md-6">
               <form
