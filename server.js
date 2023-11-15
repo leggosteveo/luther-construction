@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
@@ -12,7 +13,7 @@ const { PORT, DATABASE_URL } = require("./config/config");
 mongoose.Promise = global.Promise;
 
 app.use(express.static(path.join(__dirname, "client/public")));
-
+app.use(cors());
 // force use of https://
 app.use((req, res, next) => {
   let sslUrl;
