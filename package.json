@@ -30,7 +30,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "preinstall": "cd client && npm i && npm run build",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "eslintConfig": {
